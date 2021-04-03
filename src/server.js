@@ -16,6 +16,7 @@ const { request } = require("express");
 global.appRoot = path.resolve(__dirname);
 
 const app = express();
+
 const jwtProtection = jwt({
   secret: process.env.TOKEN_SECRET,
   algorithms: ["HS256"],

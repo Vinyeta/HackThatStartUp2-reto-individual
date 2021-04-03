@@ -1,7 +1,6 @@
 <details open="open">
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
   <ol>
-
     <li>
       <ul>
         <li><a href="#built-with">Built With</a></li>
@@ -14,7 +13,7 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#license">License</a></li>
+    <li><a href="#usage">Usage</a></li>
 
   </ol>
 </details>
@@ -109,7 +108,7 @@ This three endpoints read, update and delete the user with the username passed i
 ``` sh
   post('/api/auth/signUp')
 ```
-This is the signUp endpoint to create new users it expects and object with the necesary data to create a new user. It requires the password and username to be at least 8 and 4 characters long respectively. Moreover it also requires the email to be a valid email direction and the request will fail if there is none even if the database doesn't require one.
+This is the signUp endpoint to create new users it expects an object with the necesary data to create a new user. It requires the password and username to be at least 8 and 4 characters long respectively. Moreover it also requires the email to be a valid email direction and the request will fail if there is none even if the database doesn't require one.
 
 ``` sh
   post('/api/auth/login')
@@ -117,7 +116,7 @@ This is the signUp endpoint to create new users it expects and object with the n
 The login endpoint requires the username and password of an existing user. If succesfull it will return a json with an auth token and the user data.
 </p>
 
-<h2> ASteroid(NEA) <h2>
+<h2> ASteroid(NEA) </h2>
 
 <p align='justify'>
   The asteroid model has the "a", "e", "i", "om", "w", "am" fields, all of them numbers, in addition to a "full_name" string. All of its fields are required. It has the following exposed endpoints:
