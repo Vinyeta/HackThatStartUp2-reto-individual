@@ -6,11 +6,10 @@ const jwt = require("express-jwt");
 require("dotenv").config();
 const config = require("./config/config.js");
 require("./config/mongo");
-const asteroidRouter = require('./resources/Asteroid/asteroid.router');
-const userRouter = require ('./resources/User/user.router');
-const authRouter = require('./resources/auth/auth.router');
-const addCSVtoDB = require('./Utils/addCSVtoDB');
-
+const asteroidRouter = require("./resources/Asteroid/asteroid.router");
+const userRouter = require("./resources/User/user.router");
+const authRouter = require("./resources/auth/auth.router");
+const addCSVtoDB = require("./Utils/addCSVtoDB");
 
 const path = require("path");
 const { request } = require("express");
@@ -30,9 +29,9 @@ app.use(express.static("."));
 
 app.disable("x-powered-by");
 
-app.use('/api/auth', authRouter);
-app.use('/api/asteroids', jwtProtection, asteroidRouter);
-app.use('/api/users', jwtProtection, userRouter);
+app.use("/api/auth", authRouter);
+app.use("/api/asteroids", jwtProtection, asteroidRouter);
+app.use("/api/users", jwtProtection, userRouter);
 
 const start = async () => {
   try {
