@@ -14,6 +14,7 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
+    <li><a href="#testing">Testing</a></li>
 
   </ol>
 </details>
@@ -143,4 +144,10 @@ The login endpoint requires the username and password of an existing user. If su
   ```
 
   These endpoints get, update or delete the asteroid with the id passed in the parameter.
+</p>
+
+
+## Testing
+<p align="justify">
+There is a json document in the data folder named InsomniaTesting.json that contains the winsomnia workspace with the API tests. The get, update and remove requests as need a mongo id as parameter in the route and will not work unless one is provided from the database where the test are being conducted.
 </p>
